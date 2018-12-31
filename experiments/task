@@ -1,0 +1,62 @@
+# Hasura Project Challenge - The curve just got real
+
+## Problem Statement
+It is important that folks who join the team have significant experience with development and have the ability to pick up new technologies quickly.  To ensure that we get a sense of the code you write, your technical writing ability, and your ability to grasp new technology,
+
+## Parameters
+1) Build an app using ReactJS,
+1.5) With Backend Postgres powered by Hasura GraphQL engine.
+2) Use Firebase for authentication
+3) Deploying Hasura on Heroku.
+4) Write up, and publish a blogpost structured as a tutorial to yourself once you're done describing new concepts you've learnt, links to relevant resources etc.
+5) Upload code on GitHub
+
+## Project Taken - Store App - Update - Fish Store Application
+- Add Inventory
+- Update Inventory
+- Delete Inventory
+- Add to Order
+- Update Order
+- Delete Order
+- Menu to showcase fishes with price, description and image
+- Generate bill
+- Authentication
+- Presisting states with GraphQL subscriptions
+- Using React LocalStorage
+- Work with React Props, scripts and Router
+
+
+## Resources/Tips
+- JS [https://www.tutorialspoint.com/javascript/]
+- Start with ES6 JS [https://www.tutorialspoint.com/es6/]
+- ReactJS [Beginner Course - WesBos, React.Express]
+- GraphQL [https://www.howtographql.com/]
+- Hasura GraphQL engine with React from community examples [https://www.smashingmagazine.com/2018/12/real-time-app-graphql-subscriptions-postgres/]
+
+https://docs.hasura.io/1.0/graphql/manual/mutations/insert.html
+
+https://blog.hasura.io/tutorial-leveraging-hasura-graphql-and-apollo-to-build-and-deploy-a-fullstack-react-app-bafa32724010
+
+
+- Postgres tutorial [Aready known, not needed]
+- 3 Factor App (Work towards this Arch - https://3factor.app/)
+- Firebase authentication in React [Docs]
+- Heroku Deployment of React app [Docs]
+
+## Deliverables
+- GitHub Repository - Source code
+- Blog Post
+- Deployed App on Heroku
+sent back to work@Hasura.io
+
+Deadline - 1st January 2019 (Mine)
+         - 15 January (Hard)
+
+Thoughts
+For Implementing GraphQL
+We need to first make queries.
+Those queries need to act on database that we already provided [https://cotd2048.herokuapp.com/console/api-explorer]
+We need to add new fishes that come in, {more to come}
+delete fishes that we don't need (mutations)
+and find a way to create a channel like a realtime firebase (subscriptions)
+and then find a way to add it into ReactJS app (Apollo?)
