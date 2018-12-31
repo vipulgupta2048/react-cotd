@@ -1,17 +1,9 @@
 import React from "react";
-import firebase from 'firebase'
 import AddFishForm from "./AddFishForm.js";
 import EditFishForm from "./EditFishForm.js";
-import Login from "./Login.js";
 
 class Inventory extends React.Component {
-  authenticate = provider => {
-    const authProvider = new firebase.auth[`${provider}AuthProvider`]();
-    fire base.auth()
-  };
-
   render() {
-    return <Login authenticate={this.authenticate} />;
     return (
       <div className="inventory">
         <h2>inventory</h2>
