@@ -13,21 +13,19 @@ class App extends React.Component {
   };
 
   componentDidMount() {
-    const { store } = "cotd";
-    const localStorageRef = localStorage.getItem("cotd");
+    const localStorageRef = localStorage.getItem("/cotd");
     if (localStorageRef) {
       this.setState({ order: JSON.parse(localStorageRef) });
     }
 
-    this.ref = base.syncState(`${store}/fishes`, {
+    this.ref = base.syncState(`/cotd/fishes`, {
       context: this,
       state: "fishes"
     });
   }
 
   componentDidUpdate() {
-    console.log(this.state.order);
-    localStorage.setItem("cotd", JSON.stringify(this.state.order));
+    localStorage.setItem("/cotd", JSON.stringify(this.state.order));
   }
 
   componentWillUnmount() {

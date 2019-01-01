@@ -2,7 +2,10 @@ import React from "react";
 import { formatPrice } from "../helpers.js";
 
 class Order extends React.Component {
-  handleResetOrder() {}
+  handleResetOrder() {
+    localStorage.clear();
+    window.location.reload();
+  }
 
   renderOrder = key => {
     const fish = this.props.fishes[key];
@@ -45,6 +48,8 @@ class Order extends React.Component {
           Total:
           <strong>{formatPrice(total)}</strong>
         </div>
+        <br />
+        <button onClick={this.handleResetOrder}>Reset Order</button>
       </div>
     );
   }
