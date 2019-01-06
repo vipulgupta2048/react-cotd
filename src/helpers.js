@@ -1,7 +1,8 @@
-export function formatPrice(cents) {
-  return (cents / 100).toLocaleString("en-US", {
+export function formatPrice(paise) {
+  return (paise / 100).toLocaleString("hi", {
     style: "currency",
-    currency: "USD"
+    currency: "INR"
+    // currencyDisplay: "₹"
   });
 }
 

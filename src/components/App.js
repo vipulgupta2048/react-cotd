@@ -13,24 +13,19 @@ class App extends React.Component {
   };
 
   componentDidMount() {
-    const { params } = this.props.match;
-    const localStorageRef = localStorage.getItem(params.storeId);
+    const localStorageRef = localStorage.getItem("/cotd");
     if (localStorageRef) {
       this.setState({ order: JSON.parse(localStorageRef) });
     }
 
-    this.ref = base.syncState(`${params.storeId}/fishes`, {
+    this.ref = base.syncState(`/cotd/fishes`, {
       context: this,
       state: "fishes"
     });
   }
 
   componentDidUpdate() {
-    console.log(this.state.order);
-    localStorage.setItem(
-      this.props.match.params.storeId,
-      JSON.stringify(this.state.order)
-    );
+    localStorage.setItem("/cotd", JSON.stringify(this.state.order));
   }
 
   componentWillUnmount() {
@@ -79,7 +74,7 @@ class App extends React.Component {
     return (
       <div className="catch-of-the-day">
         <div className="menu">
-          <Header tagline="Vipul is cool" />
+          <Header tagline="Gotta Catch 'em All" />
           <ul className="fishes">
             {Object.keys(this.state.fishes).map(key => (
               <Fish
