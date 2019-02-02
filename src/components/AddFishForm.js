@@ -1,4 +1,6 @@
 import React from "react";
+import gql from "graphql-tag";
+import { withApollo } from "react-apollo";
 
 class AddFishForm extends React.Component {
   nameRef = React.createRef();
@@ -8,7 +10,6 @@ class AddFishForm extends React.Component {
   imageRef = React.createRef();
 
   createFish = event => {
-    // 1.  stop the form from submitting
     event.preventDefault();
     const fish = {
       name: this.nameRef.current.value,
@@ -17,20 +18,36 @@ class AddFishForm extends React.Component {
       desc: this.descRef.current.value,
       image: this.imageRef.current.value
     };
-    this.props.addFish(fish);
-    // refresh the form
+
+    // For the change in BackEnd through GraphQL
+    this.props.client
+      .mutate({
+        mutation: gql`
+          mutation ADD_FISH($fish: [cotd_insert_input!]!) {
+            insert_cotd(objects: $fish) {
+              returning {
+                name
+              }
+            }
+          }
+        `,
+        variables: { fish }
+      })
+      .then(res => {
+        console.log(res);
+      })
+      .catch(err => {
+        console.log(err);
+      });
+    // Feature addition - Reset the form
     event.currentTarget.reset();
+    this.props.fetchFish();
   };
+
   render() {
     return (
       <form className="fish-edit" onSubmit={this.createFish}>
-        <input
-          name="name"
-          ref={this.nameRef}
-          type="text"
-          required
-          placeholder="Name"
-        />
+        <input name="name" ref={this.nameRef} type="text" placeholder="Name" />
         <input
           name="price"
           ref={this.priceRef}
@@ -41,7 +58,6 @@ class AddFishForm extends React.Component {
           <option value="available">Fresh!</option>
           <option value="unavailable">Sold Out!</option>
         </select>
-
         <textarea name="desc" ref={this.descRef} placeholder="Desc" />
         <input
           name="image"
@@ -55,4 +71,4 @@ class AddFishForm extends React.Component {
   }
 }
 
-export default AddFishForm;
+export default withApollo(AddFishForm);

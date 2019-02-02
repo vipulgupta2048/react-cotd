@@ -1,33 +1,13 @@
 import React from "react";
-import { getFunName } from "../helpers.js";
 
-class Login extends React.Component {
-  email = React.createRef();
-
-  handleFormSubmit = event => {
-    event.preventDefault();
-    this.props.history.push(`/cotd`);
-  };
-
-  render() {
-    return (
-      <div className="store-selector">
-        <form onSubmit={this.handleFormSubmit}>
-          <h2>Log Into {getFunName()}</h2>
-          <input
-            type="email"
-            ref={this.email}
-            required
-            placeholder="Enter your email address"
-          />
-          <button type="submit">
-            Authentication is still under development. GraphQL is being very
-            naughty. And the developer ain't experienced or paid enough.
-          </button>
-        </form>
-      </div>
-    );
-  }
-}
+const Login = props => (
+  <nav className="login">
+    <h2>Inventory Login</h2>
+    <p>Sign in to manage your store's inventory.</p>
+    <button className="github" onClick={() => props.authenticate()}>
+      Log In With GitHub
+    </button>
+  </nav>
+);
 
 export default Login;
