@@ -1,25 +1,37 @@
 # Catch of the Day (COTD)
-## Deployed App | Blog Post
+## [Deployed App](http://cotdv2048.herokuapp.com) | [Blog Post](https://mixstersite.wordpress.com/2019/01/18/tutorialreactjs-hasuragraphql-apollo-firebase/)
 
-Screenshot
+![Screenshot1](./repository_assets/b.png)
+Authentication Page
 
 A powerful but simple react fish store app fueled by Hasura's GraphQL Engine, Apollo, and Firebase.
 
 ## Stack  
 1) ReactJS,
-2) Firebase for authentication
-3) Hasura's GraphQl Server and React app on heroku.
+2) Firebase,
+3) Hasura's GraphQL Server,
+4) Deployment on Heroku,
+5) Apollo
 
 ## Features
-- Add Inventory
-- Update Inventory
-- Delete Inventory
+**Available to All**
 - Add to Order
 - Update Order
 - Delete Order
+- Reset Order 
 - Menu
 - Authentication
-- Presisting state with GraphQL and LocalStorage
+
+![Screenshot1](./repository_assets/c.png)
+User Authentication view
+
+**Only visible to Owner**
+- Add Inventory
+- Update Inventory
+- Delete Inventory
+
+![Screenshot1](./repository_assets/d.png)
+Owner Authentication view 
 
 ## Credits & References
 - Credit that is due goes to the great course by Web Bos for [ReactJS](https://reactforbeginners.com)
@@ -33,6 +45,9 @@ A powerful but simple react fish store app fueled by Hasura's GraphQL Engine, Ap
 - [3 Factor App](https://3factor.app/)
 - [Firebase auth](https://firebase.google.com/docs/auth)
  and many more that helped in the long run ..
+
+![Screenshot1](./repository_assets/a.png)
+Landing Page
 
 ## License 
 This source code is under [MIT license](https://github.com/vipulgupta2048/react-cotd/blob/master/LICENSE)
