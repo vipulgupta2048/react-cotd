@@ -3,4 +3,4 @@ node_modules/
 .DS_Store
 .idea
 notes.md
-experiments/*
+experiments/
