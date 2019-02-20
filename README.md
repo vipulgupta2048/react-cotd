@@ -1,40 +1,43 @@
 # Catch of the Day (COTD)
-## [Deployed App](http://cotdv2048.herokuapp.com) | [Blog Post](https://mixstersite.wordpress.com/2019/01/18/tutorialreactjs-hasuragraphql-apollo-firebase/)
+## [Deployed App](http://cotdv2048.herokuapp.com) | [Blog Post](https://mixstersite.wordpress.com/2019/02/18/tutorialreactjs-hasuragraphql-apollo-firebase/)
+
+_A simple fish store app fueled by Hasura's GraphQL Engine, Apollo, and Firebase._
 
 ![Screenshot1](./repository_assets/b.png)
-Authentication Page
+<p align="center"><strong>Authentication Page</strong></p>
 
-A powerful but simple react fish store app fueled by Hasura's GraphQL Engine, Apollo, and Firebase.
-
-## Stack  
-1) ReactJS,
-2) Firebase,
-3) Hasura's GraphQL Server,
-4) Deployment on Heroku,
-5) Apollo
+## Stack
+1) ReactJS - ES6,
+2) Firebase auth,
+3) Hasura's GraphQL Engine,
+4) Heroku,
+5) Apollo client,
+6) GraphQL
 
 ## Features
 **Available to All**
-- Add to Order
+- Add Order
 - Update Order
 - Delete Order
-- Reset Order 
+- Reset Order
 - Menu
 - Authentication
 
 ![Screenshot1](./repository_assets/c.png)
-User Authentication view
+<p align="center"><strong>User Authentication view</strong></p>
 
-**Only visible to Owner**
+**Only visible to Owner** (Only one owner can bet there)
 - Add Inventory
 - Update Inventory
 - Delete Inventory
+- Log out
+- Delete Owner
 
 ![Screenshot1](./repository_assets/d.png)
-Owner Authentication view 
+<p align="center"><strong>Owner Authentication view</strong></p>
 
 ## Credits & References
-- Credit that is due goes to the great course by Web Bos for [ReactJS](https://reactforbeginners.com)
+- Credit where is due goes to the great course by Web Bos for [ReactJS](https://reactforbeginners.com). I learned a lot.
 - I was supported throughout the development process by [Hasura](https://hasura.io)'s developer community on [Discord](https://discord.gg/vBPpJkS)
 - JS from [TutorialsPoint](https://www.tutorialspoint.com/javascript/]
 - [ES6 JS6](https://www.tutorialspoint.com/es6/)
@@ -47,7 +50,9 @@ Owner Authentication view
  and many more that helped in the long run ..
 
 ![Screenshot1](./repository_assets/a.png)
-Landing Page
+<p align="center"><strong>Landing Page</strong></p>
 
-## License 
+## License
 This source code is under [MIT license](https://github.com/vipulgupta2048/react-cotd/blob/master/LICENSE)
+
+If you have any questions, be sure to contact me on vipulgupta2048[at]gmail[dot]com
